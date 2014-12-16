@@ -1,0 +1,7 @@
+A quick script to run multiple instances of a workload and see how well it scales.
+
+Example use:
+./multiple-instances.py --instances 1 2 4 8 --runs 3 --results result-dir --pinning 0 2 1 3 --command my-heavy-workload
+
+The above will run a scalability analysis for 1, 2, 4 and 8 processes, each time averaging over 3 runs. Results will be stored in result-dir, and the processes will be pinned to the machines cores in the following order: 0 2 1 3
+
